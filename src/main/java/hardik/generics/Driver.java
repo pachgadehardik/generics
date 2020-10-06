@@ -16,7 +16,12 @@ public class Driver
     	int num2 = sc.nextInt();
     	int num3 = sc.nextInt();
     	
+    	
     	Integer arr[] = new Integer[]{num1,num2,num3};
-    	System.out.println("Maximum among Three is: "+new MaximumData().getMaximum(arr));	
+    	Float arr1[]  = new Float[] {10.12f,98.124f,-123.222f};
+    		
+    	System.out.println("Maximum Integer Value among Three is: "+new MaximumData().getMaximum(arr));	
+    	
+    	System.out.println("Maximum Float Value among Three is: "+new MaximumData().getMaximum(arr1));
     }
 }

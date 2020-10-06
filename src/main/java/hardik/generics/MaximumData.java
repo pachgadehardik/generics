@@ -10,4 +10,11 @@ public class MaximumData {
 		return Stream.of(arr).max(Integer::compareTo).get();
 	}
 	
+	
+	public float getMaximum(Float arr[]) {
+		
+		return Stream.of(arr).max(Float::compareTo).get();
+		
+	}
+	
 }

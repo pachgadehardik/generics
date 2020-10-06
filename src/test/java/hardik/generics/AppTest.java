@@ -2,9 +2,7 @@ package hardik.generics;
 
 //import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,23 +10,11 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class AppTest extends TestCase {
-	/**
-	 * Create the test case
-	 *
-	 * @param testName name of the test case
-	 */
+
 	public AppTest(String testName) {
 		super(testName);
 	}
 
-	/**
-	 * @return the suite of tests being tested
-	 */
-//    public static Test suite()
-//    {
-//        return new TestSuite( AppTest.class );
-//    }
-//   
 
 	MaximumData obj;
 
@@ -57,7 +43,28 @@ public class AppTest extends TestCase {
 		Integer arr[] = new Integer[] { 10, 1000, 7895 };
 		assertEquals(1000, obj.getMaximum(arr));
 	}
+	
+	
+	// Test Case 1.1
+		@Test
+		public void givenMaxFloatAt1st_ShouldGiveSameNumber() {
+			Float arr[] = new Float[] { 19.21f, -12.21f, 0f };
+			assertEquals(19.21f, obj.getMaximum(arr));
+		}
 
+		// TestCase1.2
+		@Test
+		public void givenMaxFloatAt2nd_ShouldGiveSameNumber() {
+			Float arr[] = new Float[] { 19.21f, 212.21f, 12.1f };
+			assertEquals(212.21f, obj.getMaximum(arr));
+		}
+
+		// TestCase1.3
+		@Test
+		public void givenMaxFloatAt3rd_ShouldGiveSameNumber() {
+			Float arr[] = new Float[] { -19.21f, -12.21f, 0f };
+			assertEquals(0f, obj.getMaximum(arr));
+		}
 	/**
 	 * Rigourous Test :-)
 	 */
