@@ -1,22 +1,20 @@
 package hardik.generics;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MaximumData {
 
-	public int getMaximum(Integer arr[]) {
+	//Generic Method With multiple Types input 
+	public static <T extends Comparable<T>> T getMaximum(T arr[]) {
 
-		return Stream.of(arr).max(Integer::compareTo).get();
-	}
+		// Assuming First Element is Maximum
+		T maxElement = arr[0];
+		return Arrays.stream(arr).collect(Collectors.maxBy(T::compareTo)).get();
 
-	public float getMaximum(Float arr[]) {
-
-		return Stream.of(arr).max(Float::compareTo).get();
-
-	}
-
-	public String getMaximum(String arr[]) {
-		return Stream.of(arr).max(String::compareTo).get();
 	}
 
 }

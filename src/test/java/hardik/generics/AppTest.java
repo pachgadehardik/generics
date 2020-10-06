@@ -17,37 +17,37 @@ public class AppTest extends TestCase {
 
 	MaximumData obj;
 
-	@Before
-	public void init() {
-		obj = new MaximumData();
-	}
+//	@Before
+//	public void init() {
+//		obj = new MaximumData();
+//	}
 
-	// Test Case 1.1
+//	 Test Case 1.1
 	@Test
 	public void givenMaxNumberAt1st_ShouldGiveSameNumber() {
 		Integer arr[] = new Integer[] { 12, 9, 3 };
-		assertEquals(12, obj.getMaximum(arr));
+		assertEquals(12, MaximumData.getMaximum(arr).intValue());
 	}
 
 	// TestCase1.2
 	@Test
 	public void givenMaxNumberAt2nd_ShouldGiveSameNumber() {
 		Integer arr[] = new Integer[] { 10, 1000, 123 };
-		assertEquals(1000, obj.getMaximum(arr));
+		assertEquals(1000, MaximumData.getMaximum(arr).intValue());
 	}
 
 	// TestCase1.3
 	@Test
 	public void givenMaxNumberAt3rd_ShouldGiveSameNumber() {
 		Integer arr[] = new Integer[] { 10, 1000, 7895 };
-		assertEquals(1000, obj.getMaximum(arr));
+		assertEquals(1000, MaximumData.getMaximum(arr).intValue());
 	}
 
 	// Test Case 2.1
 	@Test
 	public void givenMaxFloatAt1st_ShouldGiveSameNumber() {
 		Float arr[] = new Float[] { 19.21f, -12.21f, 0f };
-		assertEquals(19.21f, obj.getMaximum(arr));
+		assertEquals(19.21f, MaximumData.getMaximum(arr));
 	}
 
 	// TestCase2.2
@@ -61,28 +61,28 @@ public class AppTest extends TestCase {
 	@Test
 	public void givenMaxFloatAt3rd_ShouldGiveSameNumber() {
 		Float arr[] = new Float[] { -19.21f, -12.21f, 0f };
-		assertEquals(0f, obj.getMaximum(arr));
+		assertEquals(0f, MaximumData.getMaximum(arr));
 	}
 
 	// Test Case 3.1
 	@Test
 	public void givenMaxStringAt1st_ShouldGiveSameNumber() {
 		String arr[] = new String[] { "Peach", "Apple", "Banana" };
-		assertEquals("Peach", obj.getMaximum(arr));
+		assertEquals("Peach", MaximumData.getMaximum(arr));
 	}
 
 	// TestCase3.2
 	@Test
 	public void givenMaxStringAt2nd_ShouldGiveSameNumber() {
 		String arr[] = new String[] {  "Apple","Peach", "Banana" };
-		assertEquals("Peach", obj.getMaximum(arr));
+		assertEquals("Peach", MaximumData.getMaximum(arr));
 	}
 
 	// TestCase3.3
 	@Test
 	public void givenMaxStringAt3rd_ShouldGiveSameNumber() {
 		String arr[] = new String[] {  "Apple", "Banana","Peach" };
-		assertEquals("Peach", obj.getMaximum(arr));
+		assertEquals("Peach", MaximumData.getMaximum(arr));
 	}
 
 	
