@@ -14,4 +14,8 @@ public class MaximumData {
 
 	}
 
+	public static <T extends Comparable<T>> void printMaximum(T element){
+		System.out.println("Maximum Element is : "+ element);
+	}
+	
 }

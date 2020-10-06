@@ -11,6 +11,6 @@ public class Driver {
 		Float arr1[] = new Float[] { 10.12f, 98.124f, -123.222f };
 		String arr2[] = new String[] { "Apple", "Peach", "Banana" };
 
-		System.out.println(MaximumData.getMaximum(arr2));
+		MaximumData.printMaximum(MaximumData.getMaximum(arr2));
 	}
 }
