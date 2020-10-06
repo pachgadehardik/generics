@@ -91,5 +91,11 @@ public class AppTest {
 		String arr[] = new String[] { "Apple", "Banana", "Peach" };
 		assertEquals("Peach", (String) new GenericClass("Apple", "Banana", "Peach").testMaximum());
 	}
+	
+	@Test
+	public void givenMultipleValuesGenerics_ShouldGiveMAxValue() {
+		Integer arr[] = new Integer[] { 12, 9, 3,123,321,3344,56788 };
+		assertEquals(56788, MaximumData.getMaximum(arr).intValue());
+	}
 
 }
