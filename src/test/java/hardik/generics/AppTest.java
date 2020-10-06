@@ -15,7 +15,6 @@ public class AppTest extends TestCase {
 		super(testName);
 	}
 
-
 	MaximumData obj;
 
 	@Before
@@ -43,31 +42,50 @@ public class AppTest extends TestCase {
 		Integer arr[] = new Integer[] { 10, 1000, 7895 };
 		assertEquals(1000, obj.getMaximum(arr));
 	}
-	
-	
-	// Test Case 1.1
-		@Test
-		public void givenMaxFloatAt1st_ShouldGiveSameNumber() {
-			Float arr[] = new Float[] { 19.21f, -12.21f, 0f };
-			assertEquals(19.21f, obj.getMaximum(arr));
-		}
 
-		// TestCase1.2
-		@Test
-		public void givenMaxFloatAt2nd_ShouldGiveSameNumber() {
-			Float arr[] = new Float[] { 19.21f, 212.21f, 12.1f };
-			assertEquals(212.21f, obj.getMaximum(arr));
-		}
+	// Test Case 2.1
+	@Test
+	public void givenMaxFloatAt1st_ShouldGiveSameNumber() {
+		Float arr[] = new Float[] { 19.21f, -12.21f, 0f };
+		assertEquals(19.21f, obj.getMaximum(arr));
+	}
 
-		// TestCase1.3
-		@Test
-		public void givenMaxFloatAt3rd_ShouldGiveSameNumber() {
-			Float arr[] = new Float[] { -19.21f, -12.21f, 0f };
-			assertEquals(0f, obj.getMaximum(arr));
-		}
-	/**
-	 * Rigourous Test :-)
-	 */
+	// TestCase2.2
+	@Test
+	public void givenMaxFloatAt2nd_ShouldGiveSameNumber() {
+		Float arr[] = new Float[] { 19.21f, 212.21f, 12.1f };
+		assertEquals(212.21f, obj.getMaximum(arr));
+	}
+
+	// TestCase2.3
+	@Test
+	public void givenMaxFloatAt3rd_ShouldGiveSameNumber() {
+		Float arr[] = new Float[] { -19.21f, -12.21f, 0f };
+		assertEquals(0f, obj.getMaximum(arr));
+	}
+
+	// Test Case 3.1
+	@Test
+	public void givenMaxStringAt1st_ShouldGiveSameNumber() {
+		String arr[] = new String[] { "Peach", "Apple", "Banana" };
+		assertEquals("Peach", obj.getMaximum(arr));
+	}
+
+	// TestCase3.2
+	@Test
+	public void givenMaxStringAt2nd_ShouldGiveSameNumber() {
+		String arr[] = new String[] {  "Apple","Peach", "Banana" };
+		assertEquals("Peach", obj.getMaximum(arr));
+	}
+
+	// TestCase3.3
+	@Test
+	public void givenMaxStringAt3rd_ShouldGiveSameNumber() {
+		String arr[] = new String[] {  "Apple", "Banana","Peach" };
+		assertEquals("Peach", obj.getMaximum(arr));
+	}
+
+	
 	public void testApp() {
 		assertTrue(true);
 	}
